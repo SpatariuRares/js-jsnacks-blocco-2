@@ -156,18 +156,26 @@ console.log(somma);
 
 var array1=[];
 var array2=[];
-for(var i=0;i<(Math.floor(Math.random()*100)+1);i++){
-    array1.push(Math.floor(Math.random()*10)+1)
+var grandezza_massima_array=10000000000000;
+var valore_massimo_array=10000000000000;
+for(var i=0;i<(Math.floor(Math.random()*grandezza_massima_array)+1);i++){
+    array1.push(Math.floor(Math.random()*valore_massimo_array)+1)
 }
-for(var i=0;i<(Math.floor(Math.random()*100)+1);i++){
-    array2.push(Math.floor(Math.random()*10)+1)
+for(var i=0;i<(Math.floor(Math.random()*grandezza_massima_array)+1);i++){
+    array2.push(Math.floor(Math.random()*valore_massimo_array)+1)
 }
+var min=[];
+var max=[];
+if(array1.length>array2.length){
+    min=array2;
+    max=array1;
+}else{
+    min=array1;
+    max=array2;
+}
+console.log(min)
 
-while(array1.length!=array2.length){
-    if(array1.length>array2.length){
-        array2.push(Math.floor(Math.random()*10)+1);
-    }else{
-        array1.push(Math.floor(Math.random()*10)+1);
-    }
+while(min.length!=max.length){
+    min.push(Math.floor(Math.random()*valore_massimo_array)+1);
 }
-console.log(array1.length,array2.length);
+console.log(min.length,max.length);
