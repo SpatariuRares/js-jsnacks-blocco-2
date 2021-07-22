@@ -154,8 +154,15 @@ for(var i=1;i<lista.length;i+=2){
 console.log(somma);
 */
 
-var array1=[5,6,2];
-var array2=[5,6,5,7,5,6,8];
+var array1=[];
+var array2=[];
+for(var i=0;i<(Math.floor(Math.random()*100)+1);i++){
+    array1.push(Math.floor(Math.random()*10)+1)
+}
+for(var i=0;i<(Math.floor(Math.random()*100)+1);i++){
+    array2.push(Math.floor(Math.random()*10)+1)
+}
+
 while(array1.length!=array2.length){
     if(array1.length>array2.length){
         array2.push(Math.floor(Math.random()*10)+1);
